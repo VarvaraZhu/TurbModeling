@@ -7,20 +7,32 @@ void Solve(const std::vector<double> & Y, std::vector<double> &U,\
     const size_t & nIter, const double & pDrop){
 
     std::vector<double> res(U.size());
-    std::cout << pDrop << std::endl;
+
     for (size_t j = 0; j != res.size(); j++)
         res[j] = 0;
 
-    for(size_t i = 0; i < nIter; i++){
-        for(size_t j = 1; j < U.size() - 1; j++){
-            res[j] = dt * (-pDrop / rho + nu  / dy / dy * (U[j + 1] + U[j - 1] - 2 * U[j]));
+    std::ofstream  residuals("res.csv");
 
-            U[j] += res[j];
+    if (residuals.is_open()) {
+
+        for(size_t i = 0; i < nIter; i++){
+            for(size_t j = 1; j < U.size() - 1; j++){
+                res[j] = dt * (-pDrop / rho + nu  / dy / dy * (U[j + 1] + U[j - 1] - 2 * U[j]));
+
+                U[j] += res[j];
+            }
+            double maxRes = vecMaxAbs(res);
+            std::cout << i << " " << maxRes << std::endl;
+            residuals << i << " " << maxRes << "\n";
+
+            if (maxRes < 1e-14) break;
         }
+        residuals.close();
+      }
 
-        std::cout << i << " " << vecMaxAbs(res) << std::endl;
-
-        if (vecMaxAbs(res) < 1e-14) break;
+      else {
+          std::cout << "Invalid output file" << std::endl;
+          return;
       }
 
       return;
