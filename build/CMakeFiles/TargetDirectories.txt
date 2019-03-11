@@ -1,0 +1,3 @@
+/media/varvara/0123-4567/zhuko/Polytech/Master2/turbulence modeling/Wilcox2006-LRN/build/CMakeFiles/rebuild_cache.dir
+/media/varvara/0123-4567/zhuko/Polytech/Master2/turbulence modeling/Wilcox2006-LRN/build/CMakeFiles/edit_cache.dir
+/media/varvara/0123-4567/zhuko/Polytech/Master2/turbulence modeling/Wilcox2006-LRN/build/CMakeFiles/Wilcox.dir

@@ -1,0 +1,33 @@
+10
+1
+50
+20
+10
+0.000001
+1.25
+1
+0
+out.plt
+
+1. Length of computational domain (real)
+
+2. Heigh of computational domain (real) 
+
+
+3. Number of cells in I direction (int)
+
+4. Number of cells in J direction (int)
+
+5. Number of iterations (int)
+
+6. Dencity (kg/m3)
+
+7. Viscosity (kg/m s)
+
+8. Inlet Veocity (m/s)
+
+9. Wall Velocity (m/s)
+
+10. Output file name (string):
+	*.plt
+ 
