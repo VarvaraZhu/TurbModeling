@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Wilcox.dir/src/functions.cpp.o"
   "CMakeFiles/Wilcox.dir/src/solver.cpp.o"
+  "CMakeFiles/Wilcox.dir/src/functions.cpp.o"
   "CMakeFiles/Wilcox.dir/src/main.cpp.o"
   "Wilcox.pdb"
   "Wilcox"

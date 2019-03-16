@@ -49,7 +49,10 @@ int main(void) {
     std::cout << "Re " << Re << std::endl;
 
     double pDrop; //Pressure drop per length unit
-    pDrop = -24 / Re / H * rho * Uref * Uref / 2;
+
+    //pDrop = -24 / Re / H * rho * Uref * Uref / 2;
+
+    pDrop = 0;
 
     double dy;  //Length of cell
     dy = H / (NJ - 1);
@@ -69,18 +72,19 @@ int main(void) {
 //********************** Allocate & Initiate All Arrays  **********************************
     std::cout << "Initiate Fields..." << std::endl;
 
-    std::vector<double> U(NJ); //X component of Velocity
+    std::vector<double> U(NJ, Uref); //X component of Velocity
 
     U[0] = 0 ;
     U[NJ - 1] = Uw;
 
-    for (size_t j = 1; j != NJ - 1; j++)
-        U[j] = Uref;
+    std::vector<double> K(NJ, 0.0); //Turbulence kinetic energy
+
+    std::vector<double> W(NJ, 0.0); //Dissipation velocity
 
 //********************** CalCFLlate Pressure Gradient ******************************
     std::cout << "Solving equations..." << std::endl;
 
-    Solve(Y, U, dy, dt, rho, nu, nIter, pDrop);
+    SolveLam(Y, U, dy, dt, rho, nu, nIter, pDrop, Uw);
 
 //********************** Output Fields *****************************************
     std::ofstream  outData("out.dat");
@@ -89,8 +93,7 @@ int main(void) {
 
     if (outData.is_open()) {
         for(size_t j = 0; j != NJ; j++){
-            outData << Y[j] << " " << U[j] << " " << pDrop / nu / 2 * ((Y[j] - 0.5 * H) * (Y[j] - 0.5 * H) - H * H / 4) << "\n";
-
+            outData << Y[j] << " " << U[j]  << "\n";
         }
         outData.close();
     }
