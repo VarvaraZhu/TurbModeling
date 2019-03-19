@@ -3,6 +3,8 @@
 
 double max(const double & a, const double & b);
 
+double min(const double & a, const double & b);
+
 double vecMaxAbs(const std::vector<double> & Y);
 
 double vecAverage(const std::vector<double> & Y);

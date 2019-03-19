@@ -10,6 +10,14 @@ double max(const double & a, const double & b){
     return b;
 }
 
+double min(const double & a, const double & b){
+  if (a < b)
+    return a;
+  else
+    return b;
+}
+
+
 double vecMaxAbs(const std::vector<double> & Y){
     double M = Y[0];
     for(std::size_t k = 0; k < Y.size(); k++){
