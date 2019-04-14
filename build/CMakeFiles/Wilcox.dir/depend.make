@@ -4,6 +4,7 @@
 CMakeFiles/Wilcox.dir/src/functions.cpp.o: ../src/functions.cpp
 CMakeFiles/Wilcox.dir/src/functions.cpp.o: ../src/functions.h
 
+CMakeFiles/Wilcox.dir/src/main.cpp.o: ../src/functions.h
 CMakeFiles/Wilcox.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Wilcox.dir/src/main.cpp.o: ../src/solver.h
 

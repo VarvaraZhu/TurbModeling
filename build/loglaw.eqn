@@ -1,5 +1,0 @@
-#!MC 1410
-$!AlterData 
-  Equation = '{U} = {V2} / 0.0400881999'
-$!AlterData 
-  Equation = '{y+} = 0.0400881999 * {V1} / 1e-4 '

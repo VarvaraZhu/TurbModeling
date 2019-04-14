@@ -1,17 +1,19 @@
 1
 1
-1e-4
+1e-5
 0
-1
-1001
-0.1
-1000
+6000
+6401
+0.5
+600000
+outLRe_6401.plt
 
 1. High of channel, m
 2. Fluid Density, kg/m3
 3. Fluid viscosity kg/m/s
 4. Velocity of upper wall, m/s
-5. Reference Velocity, m/s
+5. Re_t
 6. Number of nodes along j-direction
 7. Time step size, s
 8. Maximum number of iteration
+9. Output file

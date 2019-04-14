@@ -27,8 +27,12 @@ fstream
 -
 vector
 -
+string
+-
 solver.h
 /media/varvara/0123-4567/zhuko/Polytech/Master2/turbulence modeling/Wilcox2006-LRN/src/solver.h
+functions.h
+/media/varvara/0123-4567/zhuko/Polytech/Master2/turbulence modeling/Wilcox2006-LRN/src/functions.h
 
 /media/varvara/0123-4567/zhuko/Polytech/Master2/turbulence modeling/Wilcox2006-LRN/src/solver.cpp
 solver.h
